@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index page</title>
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
+    </head>
+    <body>
+        <div class="container">
+            
+        <h1>Index page</h1>
+        <%= new Date() %><br/>
+        <%= title %>
+      
+        <% for(var i=0;i<items.length;i++) { %>
+                <li><%= items[i].desc %></li>
+                <% } %>
+
+            <form action="/addProduct" method="POST">
+            <input type="text" name="newProduct" />
+            <input type="submit" value="Add new product" />
+            </form>
+        </div>
+        <script src="jquery/dist/jquery.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>
